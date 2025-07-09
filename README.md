@@ -104,6 +104,35 @@ cloud_filtered_dbscan = applyDBSCAN(cloud, 0.15, 10, 10000);
 // Parameters: cloud, cluster_tolerance, min_cluster_size, max_cluster_size
 ```
 
+## Performance Benchmarks
+
+The project includes benchmark tools to compare the performance of both filtering methods in Python and C++:
+
+- **benchmark_filters.py** - Python benchmark using Open3D
+- **benchmark_filters.cpp** - C++ benchmark using PCL
+
+### Benchmark Results
+
+| Method | Language | Processing Time (seconds) |
+|--------|----------|---------------------------|
+| Statistical Outlier Removal | Python | 0.000626 |
+| Statistical Outlier Removal | C++ | 0.003271 |
+| DBSCAN Clustering | Python | 0.000638 |
+| DBSCAN Clustering | C++ | 0.001269 |
+
+### Key Observations
+
+1. **Python vs C++ Performance**:
+   - Python implementation (Open3D) is faster than C++ (PCL) for both methods on small point clouds
+   - Python SOR is about 5.2x faster than C++ SOR
+   - Python DBSCAN is about 2x faster than C++ DBSCAN
+
+2. **SOR vs DBSCAN Comparison**:
+   - In Python: Both methods have similar performance
+   - In C++: DBSCAN is significantly faster than SOR (about 2.6x faster)
+
+3. **Note**: These results are for small point clouds (1050 points). Performance characteristics may change with larger datasets.
+
 ## Additional Files
 
 The project also includes some supplementary files that are not essential for the main workflow:
