@@ -20,11 +20,13 @@ include_directories(include)
 add_executable(pcl_filtering src/main.cpp)
 add_executable(create_test_cloud src/create_test_cloud.cpp)
 add_executable(visualize_clouds src/visualize_clouds.cpp)
+add_executable(benchmark_filters src/benchmark_filters.cpp)
 
 # Link against PCL libraries
 target_link_libraries(pcl_filtering ${PCL_LIBRARIES})
 target_link_libraries(create_test_cloud ${PCL_LIBRARIES})
 target_link_libraries(visualize_clouds ${PCL_LIBRARIES})
+target_link_libraries(benchmark_filters ${PCL_LIBRARIES})
 
 # Unit tests with Google Test
 option(BUILD_TESTS "Build the test programs" ON)
