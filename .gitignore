@@ -1,0 +1,58 @@
+# Build directory
+build/
+
+# Compiled Object files
+*.o
+*.obj
+*.slo
+*.lo
+*.ko
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+pcl_filtering
+create_test_cloud
+visualize_clouds
+filter_test
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+*.cmake
+
+# Generated PCD files
+*.pcd
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
